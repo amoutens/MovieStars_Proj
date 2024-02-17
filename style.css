@@ -1,0 +1,113 @@
+:root { 
+    --link-color: #fff7c2;
+}
+body {
+    background-color: #3e1166;
+    color: #ebf0f8;
+    font-family: Calibri, sans-serif;
+}
+
+h1 {
+    font-size: 36px;
+    color: #ebf0f8;
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: left;
+}
+
+p {
+    font-size: 24px;
+    width:95vw;
+    text-align: justify;
+}
+.h2-not-bold {
+    font-weight: normal;
+}
+h2 {
+    text-align: center;
+    color: #ebf0f8;
+    font-size: 2rem;
+    font-weight: bold !important;
+}
+
+
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+h1 a {
+    text-decoration: none; 
+    color:#ebf0f8;
+    font-size: 3rem;
+}
+
+#newLink {
+    color:#ebf0f8;
+}
+a:hover {
+    color: #dbd1a5 !important;
+}
+.usual-link {
+    color: var(--link-color) !important;
+    font-style: italic;
+    text-decoration: none;
+}
+ul, ol, dl {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    font-size: 24px;
+}
+dt {
+    text-decoration:underline;
+}
+ul {
+    list-style-type: disc !important;
+}
+ol {
+    list-style-type: decimal !important;
+}
+img {
+    display: inline-block;
+    margin: 20px auto;
+    max-width: 30%;
+    height: auto;
+}
+.captions {
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+table {
+    margin: 10px auto;
+    font-size: 150%;
+}
+
+table, th, td {
+    border: 1px solid #fff7c2;
+}
+
+th, td {
+    padding: 5px;
+    text-align: center;
+}
+
+table caption {
+    text-align: center;
+}
+table img {
+    max-width: 30%;
+}
+
+col[span="2"] {
+    background-color: rgb(50, 21, 76);
+}
+
+tbody tr:first-child td:last-child   {
+    width: 15%;
+}
+
+tbody tr:nth-child(2) td:first-child {
+    width: 15%;
+}
