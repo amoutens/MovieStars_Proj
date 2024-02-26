@@ -41,7 +41,9 @@ h1 a {
     color:#ebf0f8;
     font-size: 3rem;
 }
-
+h1 a:hover {
+    color:#ebf0f8;
+}
 #newLink:link {
     color:#ebf0f8;
 }
@@ -59,7 +61,7 @@ h1 a {
     color:#aa78d2;
 }
 a:hover {   
-    color: #dbd1a5 !important;
+    color: #dbd1a5;
 }
 .usual-link {
     color: var(--link-color) !important;
@@ -119,7 +121,7 @@ table img {
 }
 
 col[span="2"] {
-    background-color: rgb(50, 21, 76);
+    background-color: #32154c;
 }
 
 tbody tr:first-child td:last-child   {
@@ -201,4 +203,13 @@ text-align: center;
 } 
 .Lorem {
     width: 78%;
+}
+button {
+    background-color: rgb(126, 43, 147);
+    padding: 7px 20px 7px 20px;
+    font-size: 20px;
+    color:aliceblue;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
 }

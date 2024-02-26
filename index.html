@@ -25,6 +25,23 @@
     <hr>    
     <p>Гвендолін Крісті на новому показі Maison Margiela 2024... <a href="news_updates.html#gvenKrist" id="newLink">Дивитись детальніше</a></p> 
     <hr>
+    <button onclick="showPrompt()">Додати ім'я</button>
+    <button onclick="dialogPass()">Додати пароль</button>
+    <button onclick="showDeveloperInfo('Жайворонок','Катериною')">Про розробника</button>
+    <button onclick="twoStr()">Порівняти акторів</button>
     <p class="Lorem"><a href="https://www.google.com.ua/?gws_rd=ssl">Lorem ipsum dolor</a> sit amet consectetur adipisicing elit. Corrupti repellat dignissimos animi similique eaque cupiditate nisi aliquam ea explicabo, eos mollitia totam alias impedit tempora temporibus voluptates neque accusamus quia!Loj0Idos7mmrZdE3Z4zmODmnC4ee7gr68YBLcQ709W19qLPRCQdVUord3bbmxGB2RlUbCpi59Y7c5jpj1l Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt corporis, magnam maiores architecto pariatur, tenetur temporibus voluptatibus ipsam praesentium eos molestias! Repudiandae nulla porro, commodi nobis voluptate sunt nostrum esse. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit consequatur iure dolorem porro cumque? Nostrum provident libero quaerat est, repudiandae labore non. In soluta aut ipsam provident, ipsum corporis obcaecati? Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis vitae praesentium ipsam quisquam tempore. Accusantium labore veritatis, eius doloribus ipsum necessitatibus, cum, quaerat quasi eaque illo modi dignissimos? Nihil, eligendi. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias omnis, deserunt commodi asperiores harum, repellat unde laudantium molestiae fugiat consequatur sequi. Totam nisi labore repellat. Aliquid iure laudantium eius nulla. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste placeat fugiat eos modi veritatis repellendus adipisci illo animi. Minima beatae rem illum veritatis eum? Voluptates vel debitis facilis corrupti unde. Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ex aperiam rerum tenetur eos maxime inventore magnam in ipsa, sint fugit? Odio, dolore nam vero ex numquam veniam commodi ipsam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed explicabo expedita eligendi placeat, delectus, officia dicta qui itaque at suscipit repudiandae ducimus quod porro et in dolore consectetur ab! Quisquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur a asperiores vero, quia ut ullam, fugit facilis vitae voluptatum enim, sequi voluptate expedita blanditiis ratione earum ipsa aliquam aspernatur. Dolorem! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque, repellat quidem! Nam, veritatis. Alias doloribus consectetur molestias, neque optio, explicabo repudiandae animi error libero ab nisi blanditiis soluta cum ullam? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium esse consequuntur voluptatem? Numquam cum eum quos molestiae asperiores deleniti magnam voluptatum tempora nulla doloremque dolore ea excepturi nesciunt, enim cupiditate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ipsam omnis, iure sapiente laudantium, ipsum adipisci recusandae totam et, quia quae. Eaque vel facilis repudiandae nobis error sint eveniet illum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique possimus accusantium fuga numquam tenetur repudiandae consectetur perferendis vitae, tempore aliquid quis quos! Provident quisquam hic, omnis quo doloribus consectetur sint.</p>
+
 </body>
+<script>
+    function showPrompt() {
+        var name = prompt("Введіть своє ім'я:", "Ім'я");
+        if (name != null && name != "") {
+            if(confirm("Натисніть ОК для підтвердження або Скасувати для скасування."))
+            alert("Вітаємо, " + name);
+        } else {
+            alert("Ви не ввели ім'я!");
+        }
+    }
+</script>
+<script src="index.js"></script>
 </html>
