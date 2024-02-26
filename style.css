@@ -63,10 +63,10 @@ dt {
     text-decoration:underline;
 }
 ul {
-    list-style-type: disc !important;
+    list-style-type: disc
 }
 ol {
-    list-style-type: decimal !important;
+    list-style-type: decimal
 }
 img {
     display: inline-block;
@@ -110,4 +110,20 @@ tbody tr:first-child td:last-child   {
 
 tbody tr:nth-child(2) td:first-child {
     width: 15%;
+}
+
+
+h2 span {
+    color: rgb(232, 232, 70);
+}
+
+#gvenKrist + img {
+    padding-left: 10px;
+    padding-right: 10px;
+    border-left: 2px solid whitesmoke;
+    border-right: 2px solid whitesmoke;
+}
+
+tr > td {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
