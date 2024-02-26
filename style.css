@@ -42,10 +42,23 @@ h1 a {
     font-size: 3rem;
 }
 
-#newLink {
+#newLink:link {
     color:#ebf0f8;
 }
-a:hover {
+#newLink:visited {
+    color:#aa78d2;
+}
+#newLink:active {
+    color: rgba(189, 189, 20, 0.959);
+}
+
+.Lorem > a:link {
+    color:#ebf0f8;
+}
+.Lorem > a:visited {
+    color:#aa78d2;
+}
+a:hover {   
     color: #dbd1a5 !important;
 }
 .usual-link {
@@ -53,6 +66,11 @@ a:hover {
     font-style: italic;
     text-decoration: none;
 }
+.usual-link span{
+    color: #ebf0f8;
+    text-decoration: none;
+}
+
 ul, ol, dl {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -126,4 +144,61 @@ h2 span {
 
 tr > td {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap; 
+}
+
+.gallery-item {
+    width: calc(25% - 10px);
+    text-align: center; 
+    border-right: 2px solid whitesmoke;
+}
+.gallery-item:hover {
+    background-color: rgb(107, 50, 134) ;
+    transition: 0.3s;
+}
+
+.gallery-item img { 
+    max-width: 200px;
+    height: 300px;
+    object-fit: cover;
+}
+
+
+.gallery-item span {
+display: block;
+background-color: rgb(126, 43, 147);
+padding: 5px;
+margin-right: auto;
+margin-left: auto;
+width: 50%;
+text-align: center;
+}
+.news-item::before {
+    content: "Реклама";
+    color:rgb(232, 232, 70);
+}
+.news-item::after {
+    content: "Кінець реклами";
+    color:rgb(232, 232, 70);
+}
+.news-item {
+    float: right;
+    width: 20%;
+    position: sticky;
+    top: 200px;
+}
+.news-item img {
+    max-width: 100%;
+    margin-top: -10px;
+}
+.news-item p {
+    width: 80%;
+    font-size: 1.2rem;
+} 
+.Lorem {
+    width: 78%;
 }
