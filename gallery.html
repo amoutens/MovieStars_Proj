@@ -37,6 +37,7 @@
     setTimeout(function() {
     body.style.backgroundColor = ''; 
 }, 3000); 
+
 const newParagraph = document.createElement('p');
 const newText = document.createTextNode('Додати пункт');
 newParagraph.appendChild(newText);
@@ -48,7 +49,34 @@ deleteNode.setAttribute('onclick', "document.getElementById('delIn').remove()");
 const deleteText = document.createTextNode('Видалити мене по-іншому');
 deleteNode.appendChild(deleteText);
 document.body.append(deleteNode);
+
+
+const firstParagraph = document.querySelector('p');
+console.log("data:", firstParagraph.data);
+
+firstParagraph.data = 'Нова дата';
+console.log("data after setting:", firstParagraph.data);
+
+const newParagraph2 = document.createElement('p');
+const prependNode = document.createElement('hr');
+newParagraph2.appendChild(prependNode); 
+document.body.insertBefore(newParagraph2, firstParagraph); 
+    
+const afterNode = document.createElement('p');
+afterNode.textContent = 'After text ';
+firstParagraph.after(afterNode);
+
+setTimeout(function() {
+    const replaceNode = document.createElement('span');
+replaceNode.textContent = 'Тут більше нема лінії :(( ';
+newParagraph2.replaceWith(replaceNode);
+}, 5000);
+
+
+
    
+
+
 document.write(123);
     
 </script>
