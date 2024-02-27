@@ -29,7 +29,7 @@
             <span>Мадс Мікельсен</span>
         </div>
     </div>
-    <p id="delIn" onclick="document.getElementById('delIn').innerHTML =''">Видалити мене <button>Видали мене</button></p>
+    <p id="delIn" onclick="document.getElementById('delIn').innerHTML =''">Оновлено: Мадс Мікельсон <button>Видали мене</button></p>
 </body>
 <script>
     const body = document.body;
@@ -39,14 +39,14 @@
 }, 3000); 
 
 const newParagraph = document.createElement('p');
-const newText = document.createTextNode('Додати пункт');
+const newText = document.createTextNode('Нова інформація');
 newParagraph.appendChild(newText);
 document.body.append(newParagraph);
 
 const deleteNode = document.createElement('p');
 deleteNode.setAttribute('id', 'delNode');
-deleteNode.setAttribute('onclick', "document.getElementById('delIn').remove()");
-const deleteText = document.createTextNode('Видалити мене по-іншому');
+deleteNode.setAttribute('onclick', "{document.getElementById('delIn').remove();}");
+const deleteText = document.createTextNode('Прибрати оновлення по-іншому');
 deleteNode.appendChild(deleteText);
 document.body.append(deleteNode);
 
@@ -54,7 +54,7 @@ document.body.append(deleteNode);
 const firstParagraph = document.querySelector('p');
 console.log("data:", firstParagraph.data);
 
-firstParagraph.data = 'Нова дата';
+firstParagraph.data = 'Додана нового актора';
 console.log("data after setting:", firstParagraph.data);
 
 const newParagraph2 = document.createElement('p');
@@ -63,11 +63,11 @@ newParagraph2.appendChild(prependNode);
 document.body.insertBefore(newParagraph2, firstParagraph); 
     
 const afterNode = document.createElement('p');
-afterNode.textContent = 'After text ';
-firstParagraph.after(afterNode);
+afterNode.textContent = 'Закінчення повідомлення';
+newParagraph.after(afterNode);
 
 setTimeout(function() {
-    const replaceNode = document.createElement('span');
+    const replaceNode = document.createElement('p');
 replaceNode.textContent = 'Тут більше нема лінії :(( ';
 newParagraph2.replaceWith(replaceNode);
 }, 5000);
@@ -77,7 +77,7 @@ newParagraph2.replaceWith(replaceNode);
    
 
 
-document.write(123);
+document.write(2023);
     
 </script>
 <script src="index.js"></script>
