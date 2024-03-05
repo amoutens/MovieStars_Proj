@@ -8,7 +8,14 @@
     <title>Новинки та оновлення</title>
 </head>
 <body>
-    <h1><a href="index.html">Star4U</a></h1>
+    <div class="header-container">
+        <h1> <a href="index.html">Star4U</a></h1>
+        <div class="menu" id="menu"><button class="menu-button" data-action="index">Головна</button>
+            <button class="menu-button" data-action="bio">Зірки кіно</button>
+            <button class="menu-button" data-action="news">Новини кіно</button>
+            <button class="menu-button" data-action="gallery">Галерея фото</button>
+            <button class="menu-button" data-action="dev">Про розробника</button></div>
+        </div>
     
     <hr><h2>Новини</h2>
     <hr class="line">
@@ -21,5 +28,6 @@
         const spanHr = document.getElementById('locHr');
         spanHr.style.fontWeight = 'bold';
     </script>
+    <script src="index.js"></script>
 </body>
 </html>

@@ -8,7 +8,14 @@
     <title>Біографія зірок</title>
 </head>
 <body>
-    <h1>  <a href="index.html" style="text-decoration: none; color:#ebf0f8">Star4U</a></font></h1>
+  <div class="header-container">
+    <h1> <a href="index.html">Star4U</a></h1>
+    <div class="menu" id="menu"><button class="menu-button" data-action="index">Головна</button>
+        <button class="menu-button" data-action="bio">Зірки кіно</button>
+        <button class="menu-button" data-action="news">Новини кіно</button>
+        <button class="menu-button" data-action="gallery">Галерея фото</button>
+        <button class="menu-button" data-action="dev">Про розробника</button></div>
+    </div>
     <hr>
     <h2 class="h2-not-bold">На цьому сайті ви зможете дізнатись про <span>життя</span> улюблених акторів</h2> 
     <hr>
@@ -74,6 +81,16 @@
   function openFrame() {
     document.getElementById(`ff`).outerHTML = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3303.746310945599!2d-118.33157601216165!3d34.1016388458726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bf3b59bb205f%3A0x85775770084cf53e!2z0JPQvtC70LvQuNCy0YPQtNGB0LrQsNGPINCw0LvQu9C10Y8g0YHQu9Cw0LLRiw!5e0!3m2!1sru!2sua!4v1707822425411!5m2!1sru!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>';
   }
+
+  const list = document.querySelector('ul');
+
+  list.addEventListener('click', function(event) {
+      const target = event.target;
+      if (target.tagName === 'LI') {
+          target.classList.toggle('highlight');
+      }
+  });
   
 </script>
+<script src="index.js"></script>
 </html>

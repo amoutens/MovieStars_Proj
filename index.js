@@ -8,7 +8,7 @@ function dialogPass() {
   }
 }
 
-function showDeveloperInfo(lastName, firstName, position = "Web Developer") {
+function showDeveloperInfo(lastName='Жайворонок', firstName='Катериною', position = "Web Developer") {
     alert(`Розроблено розробником ${lastName} ${firstName} на посаді ${ position }`);
 }
 
@@ -48,3 +48,33 @@ function twoStr() {
     
 }
 
+
+const menu = document.getElementById('menu');
+
+    menu.addEventListener('click', function(event) {
+    const target = event.target;
+    if (target.classList.contains('menu-button')) {
+        const action = target.dataset.action;
+
+        switch (action) {
+            case 'index':
+                location.href='index.html';
+                break;
+            case 'bio':
+                location.href='biography.html';
+                break;
+            case 'news':
+                location.href='news_updates.html';
+                break;
+            case 'gallery':
+                location.href='gallery.html';
+                break;
+            case 'dev':
+                showDeveloperInfo();
+                break;
+            default:
+                console.error('Невідома дія:', action);
+                break;
+        }
+    }
+});
