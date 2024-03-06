@@ -34,7 +34,7 @@
     <button onclick="showPrompt()">Додати ім'я</button>
     <button onclick="dialogPass()">Додати пароль</button>
     <button onclick="showDeveloperInfo('Жайворонок','Катериною')">Про розробника</button>    <button onclick="twoStr()">Порівняти акторів</button>
-
+    <div id="dragElement">Drag me</div>
 </body>
 <script>
     function showPrompt() {
@@ -46,7 +46,26 @@
             alert("Ви не ввели ім'я!");
         }
     }
+    const dragElement = document.getElementById('dragElement');
+        let offsetX, offsetY;
 
+        dragElement.addEventListener('mousedown', function(event) {
+            offsetX = event.clientX - dragElement.getBoundingClientRect().left;
+            offsetY = event.clientY - dragElement.getBoundingClientRect().top;
+
+            document.addEventListener('mousemove', onMouseMove);
+            document.addEventListener('mouseup', onMouseUp);
+        });
+
+        function onMouseMove(event) {
+            dragElement.style.left = (event.clientX - offsetX) + 'px';
+            dragElement.style.top = (event.clientY - offsetY) + 'px';
+        }
+
+        function onMouseUp() {
+            document.removeEventListener('mousemove', onMouseMove);
+            document.removeEventListener('mouseup', onMouseUp);
+        }
 
 </script>
 <script src="index.js"></script>

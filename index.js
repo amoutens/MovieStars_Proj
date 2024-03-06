@@ -49,11 +49,19 @@ function twoStr() {
 }
 
 
-const menu = document.getElementById('menu');
+/*const menu = document.getElementById('menu');
 
     menu.addEventListener('click', function(event) {
     const target = event.target;
     if (target.classList.contains('menu-button')) {
+
+        target.addEventListener('mouseover', function(event) {
+            event.target.classList.add('highlight-menu');
+        });
+
+        target.addEventListener('mouseout', function(event) {
+            event.target.classList.remove('highlight-menu');
+        });
         const action = target.dataset.action;
 
         switch (action) {
@@ -77,4 +85,67 @@ const menu = document.getElementById('menu');
                 break;
         }
     }
+});*/
+
+const menu = document.getElementById('menu');
+menu.addEventListener('mouseover', function(event) {
+    const target = event.target;
+    if (target.classList.contains('menu-button')) {
+        target.classList.add('highlight-menu');
+    }
 });
+
+menu.addEventListener('mouseout', function(event) {
+    const target = event.target;
+    if (target.classList.contains('menu-button')) {
+        target.classList.remove('highlight-menu');
+    }
+});
+
+menu.addEventListener('click', function(event) {
+    const target = event.target;
+    if (target.classList.contains('menu-button')) {
+        const action = target.dataset.action;
+
+        switch (action) {
+            case 'index':
+                location.href = 'index.html';
+                break;
+            case 'bio':
+                location.href = 'biography.html';
+                break;
+            case 'news':
+                location.href = 'news_updates.html';
+                break;
+            case 'gallery':
+                location.href = 'gallery.html';
+                break;
+            case 'dev':
+                showDeveloperInfo();
+                break;
+            default:
+                console.error('Невідома дія:', action);
+                break;
+        }
+    }
+});
+const dragElement = document.getElementById('dragElement');
+        let offsetX, offsetY;
+
+        dragElement.addEventListener('mousedown', function(event) {
+            offsetX = event.clientX - dragElement.getBoundingClientRect().left;
+            offsetY = event.clientY - dragElement.getBoundingClientRect().top;
+
+            document.addEventListener('mousemove', onMouseMove);
+            document.addEventListener('mouseup', onMouseUp);
+        });
+
+        function onMouseMove(event) {
+            dragElement.style.left = (event.clientX - offsetX) + 'px';
+            dragElement.style.top = (event.clientY - offsetY) + 'px';
+        }
+
+        function onMouseUp() {
+            document.removeEventListener('mousemove', onMouseMove);
+            document.removeEventListener('mouseup', onMouseUp);
+        }
